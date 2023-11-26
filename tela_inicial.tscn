@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b30tylmughvdn"]
+[gd_scene load_steps=16 format=3 uid="uid://b30tylmughvdn"]
 
 [ext_resource type="VideoStream" path="res://gfx/black_hole_8bit.ogv" id="1_2yqsm"]
 [ext_resource type="Script" path="res://VideoStreamPlayer.gd" id="2_u3ybm"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://crk7irccorb1e" path="res://gfx/exit1.png" id="4_l4kgq"]
 [ext_resource type="Texture2D" uid="uid://br32i6wytsi6a" path="res://gfx/start_hover.png" id="4_ln7c8"]
 [ext_resource type="Texture2D" uid="uid://deuvdq86dx01i" path="res://gfx/SC_logo.png" id="5_paars"]
+[ext_resource type="Texture2D" uid="uid://sra43drdlb4d" path="res://gfx/start_pressed.png" id="5_tpiv6"]
 [ext_resource type="Texture2D" uid="uid://b12gct3lblqyu" path="res://gfx/exit_hover.png" id="6_iybhe"]
+[ext_resource type="Texture2D" uid="uid://b1jtummq1idnb" path="res://gfx/exit_pressed.png" id="8_lmw3k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86gfj"]
 texture = ExtResource("3_wkmph")
@@ -14,25 +16,32 @@ texture = ExtResource("3_wkmph")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ix3vg"]
 texture = ExtResource("4_ln7c8")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hef00"]
+texture = ExtResource("5_tpiv6")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7jar"]
 texture = ExtResource("4_l4kgq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibsbo"]
 texture = ExtResource("6_iybhe")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhu2i"]
+texture = ExtResource("8_lmw3k")
+
 [node name="tela_inicial" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 768.0
+offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
-offset_right = 1920.0
+offset_right = 1928.0
 offset_bottom = 1088.0
-scale = Vector2(0.600808, 0.597328)
 stream = ExtResource("1_2yqsm")
 autoplay = true
 expand = true
@@ -48,6 +57,7 @@ offset_right = 293.275
 offset_bottom = 491.856
 theme_override_styles/normal = SubResource("StyleBoxTexture_86gfj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ix3vg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hef00")
 expand_icon = true
 
 [node name="exit" type="Button" parent="VideoStreamPlayer"]
@@ -60,6 +70,7 @@ offset_right = 213.275
 offset_bottom = 597.326
 theme_override_styles/normal = SubResource("StyleBoxTexture_t7jar")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ibsbo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hhu2i")
 expand_icon = true
 
 [node name="TextureRect" type="TextureRect" parent="VideoStreamPlayer"]
