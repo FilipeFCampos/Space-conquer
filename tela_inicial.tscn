@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://b30tylmughvdn"]
+[gd_scene load_steps=12 format=3 uid="uid://b30tylmughvdn"]
 
 [ext_resource type="VideoStream" path="res://gfx/black_hole_8bit.ogv" id="1_2yqsm"]
 [ext_resource type="Script" path="res://VideoStreamPlayer.gd" id="2_u3ybm"]
 [ext_resource type="Texture2D" uid="uid://dxuhpfmuvvuyc" path="res://gfx/start1.png" id="3_wkmph"]
 [ext_resource type="Texture2D" uid="uid://crk7irccorb1e" path="res://gfx/exit1.png" id="4_l4kgq"]
+[ext_resource type="Texture2D" uid="uid://br32i6wytsi6a" path="res://gfx/start_hover.png" id="4_ln7c8"]
+[ext_resource type="Texture2D" uid="uid://deuvdq86dx01i" path="res://gfx/SC_logo.png" id="5_paars"]
+[ext_resource type="Texture2D" uid="uid://b12gct3lblqyu" path="res://gfx/exit_hover.png" id="6_iybhe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86gfj"]
+texture = ExtResource("3_wkmph")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ix3vg"]
+texture = ExtResource("4_ln7c8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7jar"]
+texture = ExtResource("4_l4kgq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibsbo"]
+texture = ExtResource("6_iybhe")
 
 [node name="tela_inicial" type="Control"]
 layout_mode = 3
@@ -27,26 +42,35 @@ script = ExtResource("2_u3ybm")
 self_modulate = Color(0.988235, 0.988235, 0.988235, 1)
 texture_filter = 1
 layout_mode = 0
-offset_left = 12.0
-offset_top = 417.0
-offset_right = 273.0
-offset_bottom = 496.0
-icon = ExtResource("3_wkmph")
-flat = true
+offset_left = 43.2751
+offset_top = 416.856
+offset_right = 293.275
+offset_bottom = 491.856
+theme_override_styles/normal = SubResource("StyleBoxTexture_86gfj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ix3vg")
 expand_icon = true
 
 [node name="exit" type="Button" parent="VideoStreamPlayer"]
 self_modulate = Color(0.988235, 0.988235, 0.988235, 1)
 texture_filter = 1
-offset_left = 11.6509
+layout_mode = 0
+offset_left = 43.2751
 offset_top = 522.326
-offset_right = 194.651
-offset_bottom = 601.326
-icon = ExtResource("4_l4kgq")
-flat = true
+offset_right = 213.275
+offset_bottom = 597.326
+theme_override_styles/normal = SubResource("StyleBoxTexture_t7jar")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ibsbo")
 expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="VideoStreamPlayer"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 27.0
+offset_right = 697.0
+offset_bottom = 327.0
+texture = ExtResource("5_paars")
 
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
 [connection signal="button_down" from="VideoStreamPlayer/start" to="VideoStreamPlayer" method="_on_start_button_down"]
-[connection signal="focus_entered" from="VideoStreamPlayer/start" to="VideoStreamPlayer" method="_on_start_focus_entered"]
 [connection signal="button_down" from="VideoStreamPlayer/exit" to="VideoStreamPlayer" method="_on_exit_button_down"]

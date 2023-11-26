@@ -1,11 +1,10 @@
 extends VideoStreamPlayer
 
-func _init():
+func _ready():
 	print("Jogo iniciado")
 
 func _on_finished():
 	play()
-
 
 func _on_exit_button_down():
 	get_tree().quit()
@@ -15,6 +14,3 @@ func _on_exit_button_down():
 func _on_start_button_down():
 	get_tree().change_scene_to_file("res://Level_1.tscn")
 	print("Cena mudada")
-
-
-#func _on_start_focus_entered():
