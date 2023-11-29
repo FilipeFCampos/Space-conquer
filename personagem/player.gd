@@ -14,6 +14,7 @@ func _move() -> void:
 		Input.get_axis("Cima", "Baixo")
 	)
 	
+<<<<<<< HEAD
 	if _direction != Vector2.ZERO:
 		velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration)
 		velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration)
@@ -21,5 +22,9 @@ func _move() -> void:
 		
 	velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _friction)
 	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _friction)
+=======
+	velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration)
+	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration)
+>>>>>>> tela-inicial
 	velocity = _direction.normalized() * _move_speed
 	move_and_slide()
