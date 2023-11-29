@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dynx1b8avmmn4"]
+
+[ext_resource type="Script" path="res://personagem/player.gd" id="1_toedb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wxjvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fy3n"]
+size = Vector2(6, 2)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_toedb")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(-2.98023e-07, 0.5)
+scale = Vector2(6, 9)
+texture = SubResource("PlaceholderTexture2D_wxjvm")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1fy3n")
