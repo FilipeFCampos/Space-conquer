@@ -8,14 +8,13 @@
 size = Vector2(6, 2)
 
 [node name="player" type="CharacterBody2D"]
+scale = Vector2(3.95102, 4.20633)
 script = ExtResource("1_toedb")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(-2.98023e-07, 0.5)
 scale = Vector2(6, 9)
 texture = SubResource("PlaceholderTexture2D_wxjvm")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 show_behind_parent = true
-position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_1fy3n")
