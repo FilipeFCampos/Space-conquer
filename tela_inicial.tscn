@@ -1,14 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://b30tylmughvdn"]
+[gd_scene load_steps=16 format=3 uid="uid://cgvapaf77ii6o"]
 
 [ext_resource type="VideoStream" path="res://gfx/black_hole_8bit.ogv" id="1_2yqsm"]
 [ext_resource type="Script" path="res://VideoStreamPlayer.gd" id="2_u3ybm"]
-[ext_resource type="Texture2D" uid="uid://dxuhpfmuvvuyc" path="res://gfx/start1.png" id="3_wkmph"]
-[ext_resource type="Texture2D" uid="uid://crk7irccorb1e" path="res://gfx/exit1.png" id="4_l4kgq"]
-[ext_resource type="Texture2D" uid="uid://br32i6wytsi6a" path="res://gfx/start_hover.png" id="4_ln7c8"]
-[ext_resource type="Texture2D" uid="uid://deuvdq86dx01i" path="res://gfx/SC_logo.png" id="5_paars"]
-[ext_resource type="Texture2D" uid="uid://sra43drdlb4d" path="res://gfx/start_pressed.png" id="5_tpiv6"]
-[ext_resource type="Texture2D" uid="uid://b12gct3lblqyu" path="res://gfx/exit_hover.png" id="6_iybhe"]
-[ext_resource type="Texture2D" uid="uid://b1jtummq1idnb" path="res://gfx/exit_pressed.png" id="8_lmw3k"]
+[ext_resource type="Texture2D" path="res://gfx/start1.png" id="3_wkmph"]
+[ext_resource type="Texture2D" path="res://gfx/exit1.png" id="4_l4kgq"]
+[ext_resource type="Texture2D" path="res://gfx/start_hover.png" id="4_ln7c8"]
+[ext_resource type="Texture2D" path="res://gfx/SC_logo.png" id="5_paars"]
+[ext_resource type="Texture2D" path="res://gfx/start_pressed.png" id="5_tpiv6"]
+[ext_resource type="Texture2D" path="res://gfx/exit_hover.png" id="6_iybhe"]
+[ext_resource type="Texture2D" path="res://gfx/exit_pressed.png" id="8_lmw3k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86gfj"]
 texture = ExtResource("3_wkmph")
