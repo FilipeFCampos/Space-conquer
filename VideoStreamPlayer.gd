@@ -14,5 +14,5 @@ func _on_exit_button_down():
 
 func _on_start_button_down():
 	await get_tree().create_timer(0.05).timeout
-	get_tree().change_scene_to_file("res://personagem/cenas/player.tscn")
+	get_tree().change_scene_to_file("res://level_1.tscn")
 	print("Cena mudada")

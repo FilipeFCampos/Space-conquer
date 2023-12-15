@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b66wcui6u47ks"
-path="res://.godot/imported/Sprite Sheet - Capitão.png-458d10b4d48b22675aed69adf6e0ed5b.ctex"
+uid="uid://drg8iqwlvca4k"
+path="res://.godot/imported/cidade.jpeg-e07b1748d7bd39f7fa9ca8cea5daab02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personagem/assets/Sprite Sheet - Capitão.png"
-dest_files=["res://.godot/imported/Sprite Sheet - Capitão.png-458d10b4d48b22675aed69adf6e0ed5b.ctex"]
+source_file="res://terreno/assets/cidade.jpeg"
+dest_files=["res://.godot/imported/cidade.jpeg-e07b1748d7bd39f7fa9ca8cea5daab02.ctex"]
 
 [params]
 

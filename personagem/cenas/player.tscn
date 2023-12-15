@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://dynx1b8avmmn4"]
 
 [ext_resource type="Script" path="res://personagem/player.gd" id="1_toedb"]
-[ext_resource type="Texture2D" uid="uid://bhwd5u527f0pw" path="res://personagem/assets/Sprite Sheet - Capitão.png" id="2_ioukp"]
+[ext_resource type="Texture2D" uid="uid://b66wcui6u47ks" path="res://personagem/assets/Sprite Sheet - Capitão.png" id="2_ioukp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fy3n"]
 size = Vector2(14.1736, 3.3283)

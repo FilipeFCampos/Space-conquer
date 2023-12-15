@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsljjdawsoxuy"]
+
+[ext_resource type="Script" path="res://inimigos/inimigo.gd" id="1_hyrff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iousw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_durj8"]
+radius = 59.0762
+
+[node name="Inimigo" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_hyrff")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+shape = SubResource("RectangleShape2D_iousw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_durj8")
