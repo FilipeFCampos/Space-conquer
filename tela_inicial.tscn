@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cgvapaf77ii6o"]
+[gd_scene load_steps=17 format=3 uid="uid://cgvapaf77ii6o"]
 
 [ext_resource type="VideoStream" path="res://gfx/black_hole_8bit.ogv" id="1_2yqsm"]
 [ext_resource type="Script" path="res://VideoStreamPlayer.gd" id="2_u3ybm"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://sra43drdlb4d" path="res://gfx/start_pressed.png" id="5_tpiv6"]
 [ext_resource type="Texture2D" uid="uid://b12gct3lblqyu" path="res://gfx/exit_hover.png" id="6_iybhe"]
 [ext_resource type="Texture2D" uid="uid://b1jtummq1idnb" path="res://gfx/exit_pressed.png" id="8_lmw3k"]
+[ext_resource type="AudioStream" uid="uid://dwfftpm6pbiyr" path="res://Músicas/space_conquer_title.mp3" id="10_bsscx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86gfj"]
 texture = ExtResource("3_wkmph")
@@ -81,6 +82,11 @@ offset_top = 27.0
 offset_right = 697.0
 offset_bottom = 327.0
 texture = ExtResource("5_paars")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_bsscx")
+autoplay = true
+panning_strength = 0.0
 
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
 [connection signal="button_down" from="VideoStreamPlayer/start" to="VideoStreamPlayer" method="_on_start_button_down"]

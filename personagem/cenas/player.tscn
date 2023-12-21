@@ -580,6 +580,7 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_1mpod")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_df5wg")
 blend_point_3/pos = Vector2(1, 0)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_mekih"]
 states/Start/position = Vector2(230, 100)

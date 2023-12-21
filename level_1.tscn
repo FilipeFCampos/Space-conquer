@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdr4qmat6mvs5"]
+[gd_scene load_steps=4 format=3 uid="uid://bdr4qmat6mvs5"]
 
 [ext_resource type="PackedScene" uid="uid://2b1bk344f312" path="res://terreno/cenas/tile_map.tscn" id="1_ux0ag"]
 [ext_resource type="PackedScene" uid="uid://dynx1b8avmmn4" path="res://personagem/cenas/player.tscn" id="2_hswsm"]
+[ext_resource type="AudioStream" uid="uid://bg2xr73xsu1ep" path="res://Músicas/space_conquer_overworld.mp3" id="3_h3j0h"]
 
 [node name="level_1" type="Node2D"]
 
@@ -14,3 +15,17 @@ scale = Vector2(1.5, 1.598)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(3.5, 3.5)
+limit_left = 1
+limit_top = 1
+limit_right = 1600
+limit_bottom = 656
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h3j0h")
+volume_db = -10.0
+autoplay = true
+max_distance = 10000.0
+attenuation = 1e-05
+panning_strength = 0.0
