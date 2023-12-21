@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdr4qmat6mvs5"]
+[gd_scene load_steps=5 format=3 uid="uid://bdr4qmat6mvs5"]
 
 [ext_resource type="PackedScene" uid="uid://2b1bk344f312" path="res://terreno/cenas/tile_map.tscn" id="1_ux0ag"]
 [ext_resource type="PackedScene" uid="uid://dynx1b8avmmn4" path="res://personagem/cenas/player.tscn" id="2_hswsm"]
 [ext_resource type="AudioStream" uid="uid://bg2xr73xsu1ep" path="res://Músicas/space_conquer_overworld.mp3" id="3_h3j0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yq5m8"]
+size = Vector2(56, 44)
 
 [node name="level_1" type="Node2D"]
 
@@ -29,3 +32,12 @@ autoplay = true
 max_distance = 10000.0
 attenuation = 1e-05
 panning_strength = 0.0
+
+[node name="Area2D" type="Area2D" parent="."]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(708, 117)
+shape = SubResource("RectangleShape2D_yq5m8")
+
+[connection signal="body_shape_entered" from="Area2D" to="player" method="_on_area_2d_body_shape_entered"]

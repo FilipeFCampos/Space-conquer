@@ -44,3 +44,10 @@ func _animate() -> void:
 		return
 	
 	_state_machine.travel("idle")
+
+
+
+func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	await get_tree().create_timer(0.3).timeout
+	get_tree().change_scene_to_file("res://level_1.tscn")
+	print("Cena mudada")
